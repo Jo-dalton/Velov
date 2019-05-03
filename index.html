@@ -1,0 +1,102 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Vélo'v - Locations de vélos</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Location de vélos sur la ville de Lyon, réservation de vélo en libre service" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Diaporama instructions de réservation -->
+
+<body>
+    <h1>Vélo'v - Location de vélos</h1>
+
+    <section id="Slider">
+
+        <br>
+        <div id="slide">
+
+            <button onclick="prev()">
+                < </button> <img id="diapo" src="/diapo1.jpg" width="1920px" height="1080px" />
+                <button onclick="next()"> > </button>
+
+
+
+        </div>
+    </section>
+
+    <!--Fin diaporama-->
+
+
+    <div>Choisissez votre station :</div>
+    <br>
+
+    <section id="bloc">
+
+        <!--Intégration de la map Google-->
+
+        <div id="map"></div>
+
+        <div id="bloc2">
+            <h3>Détails de la station</h3>
+
+            <!--Formulaire de réservation-->
+
+            <form id="form">
+
+                <input type="text" name="Nom" id="lName" />
+                <input type="text" name="Prénom" id="fName" />
+                <button id="resa">Réserver</button>
+            </form>
+
+            <!--Canvas---->
+
+            <canvas id="canvas" width="180" height="150"></canvas>
+
+        </div>
+
+    </section>
+
+    <!---Javascript-->
+
+    <!--Slider-->
+    <script onkeydown="myKey()" src="/js/slider.js"></script>
+
+    <!--localeStorage-->
+    <script onclick="formRes()" src="/js/localeStorage.js"></script>
+
+    <!--Canvas---->
+    <script onload="draw();" scr="/js/canvas.js"></script>
+
+    <!--Map et Markers Google-->
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6nLcRbLY0Pe2_P2BXzo41plTvQUAUCtU&callback=initMap"
+        async defer></script>
+
+
+    <script>
+        function initMap() {
+            var lyon = {
+                lat: 45.764043,
+                lng: 4.835658999999964
+            };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: lyon
+            });
+            var marker = new google.maps.Marker({
+                position: lyon,
+                map: map
+            });
+
+
+        }
+    </script>
+
+    <script= GET
+        https://api.jcdecaux.com/vls/v1/stations?contract={lyon}&apiKey={c5348d9cb3db966894f387c82026ce02bc098b3d}
+        </script> </body> </html>

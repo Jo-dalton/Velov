@@ -1,0 +1,24 @@
+//localeStorage
+
+function reservation() {
+
+    var lName = localStorage.getItem('lName');
+    var fName = localStorage.getItem('fName');
+
+    var lName = document.getElementById('lName').value = 'lName';
+    var fName = document.getElementById('fName').value = 'fName';
+
+}
+
+
+// Vérification si le localeStorage est disponible depuis un navigateur
+if (typeof localStorage !== "undefined") {
+
+    if localStorage.setItem("lName", "fName") {
+        alert("Réservation enregistrée");
+        document.getElementById('resa').value = localStorage.getItem('lName', "fName");
+    }
+} else {
+    // Pas de support de stockage en ligne.
+    alert('Support de stockage non disponible');
+}

@@ -1,0 +1,65 @@
+/*Feuille de style*/
+
+/*Polices utilisées*/
+
+h1,
+h2,
+h3 {
+    font-family: Arial Narrow Bold, sans-serif;
+}
+
+p {
+    font-family: Arial Narrow Bold, sans-serif;
+}
+
+input {
+    font-family: Arial Narrow Bold, sans-serif;;
+}
+
+/*Diapo style*/
+
+h1{
+    text-align: center;
+}
+
+
+#diapo{
+height: 60%;
+width: 60%;
+}
+
+#slide{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+#bloc{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+#map{
+height: 400px;
+width: 50%;
+}
+
+#form{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.input{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+
+#canvas{
+border: 1px solid black;
+}
