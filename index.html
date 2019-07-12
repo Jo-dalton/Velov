@@ -20,8 +20,8 @@
         <div id="slide">
 
             <button onclick="prev()">
-                < </button> <img id="diapo" src="/diapo1.jpg" width="1920px" height="1080px" />
-                <button onclick="next()"> > </button>
+            </button> <img id="diapo" src="/diapo1.jpg" width="1920px" height="1080px" />
+            <button onclick="next()"> > </button>
 
 
 
@@ -45,11 +45,12 @@
 
             <!--Formulaire de réservation-->
 
-            <form id="form">
+            <form action="" method="GET" id="form">
 
-                <input type="text" name="Nom" id="lName" />
-                <input type="text" name="Prénom" id="fName" />
-                <button id="resa">Réserver</button>
+                <input type="text" name="Nom" id="lName" placeholder="Nom" />
+                <input type="text" name="Prénom" id="fName" placeholder="Prénom" />
+                <button type="submit" onclick=stock() id="resa">Réserver</button>
+
             </form>
 
             <!--Canvas---->
@@ -62,41 +63,25 @@
 
     <!---Javascript-->
 
+    <!--Jquery-->
+    <script src="/js/jquery-3.4.1.js"></script>
+
     <!--Slider-->
     <script onkeydown="myKey()" src="/js/slider.js"></script>
 
     <!--localeStorage-->
-    <script onclick="formRes()" src="/js/localeStorage.js"></script>
+    <script onclick="stock()" src="/js/localeStorage.js"></script>
 
     <!--Canvas---->
     <script onload="draw();" scr="/js/canvas.js"></script>
 
     <!--Map et Markers Google-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6nLcRbLY0Pe2_P2BXzo41plTvQUAUCtU&callback=initMap"
+        type="text/javascript"></script>
+
+    <script src="/js/googleapi.js"></script>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6nLcRbLY0Pe2_P2BXzo41plTvQUAUCtU&callback=initMap"
-        async defer></script>
+</body>
 
-
-    <script>
-        function initMap() {
-            var lyon = {
-                lat: 45.764043,
-                lng: 4.835658999999964
-            };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: lyon
-            });
-            var marker = new google.maps.Marker({
-                position: lyon,
-                map: map
-            });
-
-
-        }
-    </script>
-
-    <script= GET
-        https://api.jcdecaux.com/vls/v1/stations?contract={lyon}&apiKey={c5348d9cb3db966894f387c82026ce02bc098b3d}
-        </script> </body> </html>
+</html>

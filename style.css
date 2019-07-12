@@ -13,15 +13,24 @@ p {
 }
 
 input {
-    font-family: Arial Narrow Bold, sans-serif;;
+    font-family: Arial Narrow Bold, sans-serif;
+}
+
+body{
+    background-color: rgb(32, 32, 49);
 }
 
 /*Diapo style*/
 
 h1{
     text-align: center;
+    color: cornflowerblue;
 }
 
+h3{
+    color: cornflowerblue;
+
+}
 
 #diapo{
 height: 60%;
@@ -45,6 +54,9 @@ justify-content: center;
 #map{
 height: 400px;
 width: 50%;
+margin-left: 25px;
+margin-right: 50px;
+margin-bottom: 15px;
 }
 
 #form{
@@ -61,5 +73,6 @@ justify-content: center;
 
 
 #canvas{
-border: 1px solid black;
+border: 1px solid rgb(236, 236, 236);
+background-color: grey;
 }
